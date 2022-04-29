@@ -1,0 +1,555 @@
+
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+text-decoration: none;
+list-style: none;
+
+color: white;
+}
+
+body{
+overflow-x: hidden;
+background: rgb(0, 0, 0);
+}
+
+nav{
+display: flex;
+justify-content: space-around;
+align-items: center;
+background: rgb(20,20,20);
+height: 60px;
+width: 100%;
+}
+
+button{
+    display: grid;
+
+    margin: auto;
+    width: 100px;
+    height: 50px;
+
+    text-decoration: none;
+    color: white;
+
+    background:white;
+    position: relative;
+    align-items: center;
+}
+
+.log{
+    display: grid;
+
+    margin-top: 5px;
+    width: 100px;
+    height: 50px;
+
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+
+    background: gray;
+
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li{
+display: inline-block;
+line-height: 80px;
+margin: 0px 5px;
+
+}
+input{
+color: black;
+}
+/* changes the shape and size of search button 
+
+background: rgb(13,4,23);
+background: linear-gradient(0deg, rgba(13,4,23,1) 0%, rgba(67,18,66,1) 99%);
+
+background: radial-gradient(circle, rgba(2,0,36,1) 72%, rgba(118,4,186,0.6573004201680672) 91%, rgba(0,239,255,0.5060399159663865) 100%);
+*/
+.center-container{
+max-width: 1100px;
+margin:  0 auto;
+overflow: auto;
+padding: 0 40px;
+
+align-items: center;
+}
+
+.flex{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+
+/* -------------------------------------------------------- END OF THE HEADER SECTION ---------------------------------------- */
+.notification-grid{
+border-style: groove;
+border-color: white;
+grid-template-rows: auto;
+max-height: 620px;
+padding: 10px;
+gap: 30px;
+}
+
+/* ---------------------------------------------------------- END OF THE HOME PAGE ------------------------------------------- */
+.Favourites{
+
+background-color: rgb(0, 0, 0);
+
+}
+.Favourites br{
+padding-bottom: 40px;
+
+}
+
+.Favourites-icon{
+display: flex;
+border-radius: 100px;
+border-style: groove;
+background: rgb(20, 20, 20);
+
+}
+
+.Favourites-icon img{
+margin: 10px;
+border-radius: 50%;
+width: 3rem;
+height: 100%;
+}
+
+/* ----------------------------------------------------- END OF THE FAVOURITES SECTION --------------------------------------- */
+.Entertainment{
+background-color: rgb(5,5,5);
+}
+.entertainment-center-container{
+max-width: 1410px;
+margin:  0 auto;
+overflow: auto;
+padding: 0 40px;
+
+align-items: center; 
+justify-content: center;
+
+}
+
+.dual-grid-container{
+display: grid;
+grid-template-columns: auto auto;
+justify-content: space-evenly;
+gap: 10px; 
+}
+.grid-container {
+display: grid;
+grid-template-columns: auto auto auto;
+gap: 10px;
+
+align-items: center;
+justify-content: space-around;
+
+}
+
+.grid-item {
+color: black;
+border: 1px solid rgba(0, 0, 0, 0.8);
+font-size: 30px;
+
+align-items: center;
+justify-content: space-around;
+text-align: center;
+
+width: 640px;
+height: 400px;
+
+}
+
+.notification-grid-item{
+color: black;
+background-color: rgba(255, 255, 255, 0.8);
+border: 1px solid rgba(0, 0, 0, 0.8);
+padding: 20px;
+font-size: 30px;
+
+align-items: center;
+justify-content: space-around;
+text-align: center; 
+
+height: 200px;
+
+}
+
+.twitch-dashboard{
+border-style: groove;
+border-radius: 25%;
+padding: 20px;
+
+width: 200px;
+}
+
+/* --------------------------------------------------------------Entertainment Section-------------------------------------------------------- */
+
+.Entertainment div{
+font-size: 24px;
+text-align: center;
+
+border-style: groove;
+border-width: 3px;
+border-color: white;
+
+}
+.Entertainment div{
+border-style: none;
+}
+
+
+/* controlls the position of the search bar */
+.search-box {
+position: absolute;
+margin-top: 3rem;
+left: 50%;
+transform: translate(-50%, -50%);
+background: #2f3640;
+border-radius: 40px;
+}
+/* controls the transformation*/
+.search-box:hover > .search-txt {
+width: 250px;
+padding: 0 6px;
+}
+.search-box:hover > .search-btn {
+background: white;
+}
+.search-btn {
+position: absolute;
+display: flex;
+
+width: 10px;
+height: 100%;
+border-radius: 50%;
+background: #2f3640;
+justify-content: center;
+align-items: center;
+}
+
+
+/* makes the searchbar and the img align */
+.search-txt {
+margin-left: 9.375%;
+border: none;
+background: none;
+outline: none;
+float: left;
+color: #ffffff;
+font-size: 16px;
+transition: 0.4s;
+line-height: 40px;
+width: 0px;
+text-align: center;
+}
+/* controls the space arouns the search button */
+.search-box-container{
+height: 150px;
+}
+
+.search-img{
+max-width: 50px;
+max-height: 50px;
+
+border-radius: 50%;
+}
+.search-btn button{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+cursor: pointer;
+position: absolute;
+display: flex;
+border: none;
+background: none;
+}
+
+
+
+
+/* ------------------------------------------------------------------Youtube General Section--------------------------------------------------------- */
+.bottom{
+min-width: 100%;
+max-height: 5rem;
+background: rgb(13,4,23);
+background: linear-gradient(270deg, rgba(13,4,23,1) 0%, rgba(67,18,66,1) 99%);
+}
+.left{
+max-width: 5rem;
+min-height: 100%;
+
+background: rgb(13,4,23);
+background: linear-gradient(270deg, rgba(13,4,23,1) 0%, rgba(67,18,66,1) 99%);
+}
+.right{
+max-width: 5rem;
+min-height: 100%;
+
+background: rgb(13,4,23);
+background: linear-gradient(90deg, rgba(13,4,23,1) 0%, rgba(67,18,66,1) 99%);
+}   
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/*
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+}
+
+.Entertainment ul ul {
+display: none;
+}
+
+li {
+padding: 1rem;
+transition-duration: 1s;
+}
+
+.shooter-toggle,
+.youtube-toggle,
+.twitch-toggle{
+width: 0px;
+height: 0px;
+visibility: hidden;
+}
+
+.section-toggle label{
+width: 75px;
+height: 50px;
+background: gray;
+display: block;
+border-radius: 100px;
+position: relative;
+cursor: pointer;
+text-align: center;
+justify-content: space-around;
+}
+
+.section-toggle label::after{
+content: '';
+position: absolute;
+top: 5px;
+left: 5px;
+width: 40px;
+height: 40px;
+background: white;
+border-radius: 100px;
+
+}
+
+
+input:checked + label::after{
+left: calc( 100% - 5px);
+transform: translateX(-100%);
+
+}
+
+.Entertainment ul li:hover > ul{
+display: grid;
+width: 1410px;
+transition-duration: 2s;
+
+}
+
+.Entertainment input:checked + label{
+background: yellowgreen;
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------    
+.control-me::after {
+display: none;
+content: "😃";
+font-size: 100px;
+}
+#toggle:checked ~ .control-me::after {
+display: block;
+content: "😩";
+
+}
+
+label {
+background: #A5D6A7;
+padding: 0.5rem 1rem;
+border-radius: 0.5rem;
+}
+
+.visually-hidden {
+position: absolute;
+left: -100vw;
+
+// Note, you may want to position the checkbox over top the label and set the opacity to zero instead. 
+It can be better for accessibilty on some touch devices for discoverability. //
+}
+
+body {
+height: 100vh;
+margin: 0;
+font: 900 24px/1.4 -system-ui, sans-serif;
+}
+
+/* ABOUT SECTION 
+.about-section{
+background-color: gray;
+border-style: groove;
+border-color: white;
+height: 350px;
+}*/
+/*
+br{
+padding: 10px;
+}
+
+
+
+
+.flex{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
+
+
+
+a {
+color: #e7e7f3;
+text-decoration: none;
+}
+
+img{
+max-width: 100%;
+}
+
+
+nav{
+display:flex;
+justify-content: space-around;
+align-items: center;
+min-height: 8vh;
+
+}
+.navLinks{
+display: flex;
+justify-content: space-around;
+width: 30%;
+}
+.navLinks li{
+list-style: none;
+}
+.navLinks a{
+text-decoration: none;
+letter-spacing: 3px;
+font-weight: bold;
+font-size: 14px;
+}
+.navCollapse{
+display: none;
+cursor: pointer;
+}
+
+.navCollapse div{
+background-color: white;
+margin: 5px;
+width: 20px;
+height: 3px;
+
+}
+
+-responsive nav for mobile users 
+-nav bar at the side of the screen 
+@media screen and (max-width:1024px){
+.navLinks{
+width: 50%;
+}
+}
+
+@media screen and (max-width:768px){
+body{
+overflow-x: hidden;
+}
+.navLinks{
+position: absolute;
+right: 0px;
+height: 92vh;
+top: 8vh; 
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 45%;
+transform: translateX(100%);
+transition: transform 0.5s, ease-in;
+}
+.navLinks li{
+opacity: 0;
+}
+.navCollapse{
+display: block;
+}
+}
+
+.navLinks-active{
+transform: translateX(0%);
+}
+
+
+
+// start of search button// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

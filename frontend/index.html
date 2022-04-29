@@ -1,0 +1,245 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Centerspace</title>
+
+    <!-- Twitch embed script -->
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+</head>
+<body class="left right bottom">
+     <header  >
+    <div class="navbar-container">
+        <div class="navbar" id="menu">
+                   <nav>
+                    <h1 class="R-Pi">Centerspace</h1>
+
+                          <ul class="menu-list">
+                              <li class="menu-list-item">
+                                  <a href="home">Home</a></li>
+
+                              <li class="menu-list-item">
+                                  <a href="youtube">YouTube</a></li>
+  
+                                <li class="menu-list-item">
+                                    <a href="log-out">log-out</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+    </header>
+   
+
+    <div class="Favourites"> 
+        <br>
+        <div class="center-container">
+            <h2>Favourites:</h2>
+           <script>
+             // https://www.youtube.com/watch?v=Hj_JjZajo6E&list=PLg2tfDG3Ww4vIgErvlWFf68hlIQT4pG9q
+           </script> 
+        </div>
+        <div class="Favourites-icon center-container">
+            <div class="googleTag">
+            <a href="https://www.google.co.uk" target="_blank">
+                <img src="{% static 'assets/Google-icon.png' %}" alt="Google">
+            </a>
+        </div>
+            <div class="youtubeTag">
+                <a href="https://www.youtube.com/"target="_blank">
+                    <img src="{% static 'assets/youtube.png' %}" alt="YouTube">
+                </a>
+            </div>
+            <div class="twitchTag">
+                <a href="https://www.twitch.tv"target="_blank">
+                    <img src="{% static 'assets/twitchIcon.png' %}" alt="Twitch">
+                </a>
+            </div>
+            <div class="">
+                <a href="https://www.netflix.com"target="_blank">
+                    <img src="{% static 'assets/Netflix-icon.png' %}" alt="Netflix">
+                </a>
+            </div>
+            <div class="chessTag">
+                <a href="https://www.chess.com/home"target="_blank">
+                    <img src="{% static 'assets/chess.com.png' %}" alt="Chess.com">
+                </a>
+            </div>
+        </div><br>
+    </div>
+    <br>
+
+    <div class="Spotify">
+        
+    </div>
+
+    <div class="Entertainment entertainment-center-container grid">
+        <!-- container for all forms of entertainmnet -->
+        
+        <!-- BEGINING OF LIST OF LISTS -->
+        
+        <!-- New Section-->
+        <div class="search-box-container">
+            <div class="search-box">
+                <input class="search-txt"type="text"name="" placeholder="Search for Streamer Here" id="myText">
+                 <a class="search-btn" id="mybutton">
+                     <img class="search-img" src="{% static 'assets/twitchIcon.png' %}" alt="">
+                     <button type="button" class="enter-btn" id="myButton"></button>
+                    </a>
+                    </div>
+                </div>
+
+        <div class="Twitch">
+            <!-- Add a placeholder for the Twitch embed -->
+            <div class="embed" id="twitch-embed">
+            
+            <!-- Create a Twitch.Player object. This will render within the placeholder div -->
+            <script type="text/javascript">
+            new Twitch.Player("twitch-embed", {
+                width: '50%',
+                height: '405',
+                channel: ""
+            });
+            </script>
+            </div>
+            <!-- Add a placeholder for the Twitch embed -->
+            <div class="embed" id="twitch-embed">
+
+                
+            
+                <!-- Create a Twitch.Player object. This will render within the placeholder div -->
+                <script type="text/javascript">
+                    let userInput;
+                    function getUserInput(userInput){
+
+                        // doesnt recognise this line 
+                        userInput.includes("https://")? getURL(userInput) :
+                        
+                        document.getElementById('myButton').onclick = () => {
+                                userInput = document.getElementById('myText').value;
+                                console.log(userInput) 
+                                new Twitch.Player("twitch-embed", {
+                                    width: '50%',
+                                    height: 405,
+                                    channel: (userInput),
+                                    });
+
+                                    localStorage.setItem('streamerInput', userInput)
+                                    console.log(localStorage.getItem('streamerInput'))
+                                }
+                            }
+                        
+                    getUserInput(document.getElementById('myText').value)
+                </script>
+                <!--
+
+                    <iframe
+                    id="chat_embed"
+                    src="https://www.twitch.tv/embed/moose_taffy/chat?"
+                    height="500"
+                    width="350">
+                    </iframe>
+
+                -->
+                
+            </div>
+        </div><br>
+
+        <!-- New Section-->
+        <div class="search-box-container">
+            <div class="search-box">
+                <input class="search-txt"type="text"name="" placeholder="Paste URL Here" id="url">
+                 <a class="search-btn" id="youTubeButton">
+                     <img class="search-img" src="{% static 'assets/youtube.png' %}" alt="">
+                     <button type="button" class="enter-btn" id="youTubeButton"></button>
+                    </a>
+                    </div>
+                </div>
+
+            <div class="YouTube grid-item embed">
+                <div class="YouTube-container" id="yuotube-container">
+                    <script>
+                    // https://www.youtube.com/
+                    // + embed/
+                    // watch?v=r64SQjPSlBE&list=PLHtQDtiBQx3eaCkDqITLPSqX-7yljkjgp
+                    function getSplitURL (splitURL) {
+
+                        if (splitURL.toString().length < 50){
+                            url = splitURL.split("https://www.youtube.com/watch?v=")
+                            console.log(url) 
+                            url.splice(1,0,"embed/")
+                            console.log(url)
+                            newURL = url.join("")
+                            console.log(newURL)
+
+                            finalURL = ("https://www.youtube.com/" + newURL)
+                            console.log(finalURL)
+                            document.getElementById("video").setAttribute("src", finalURL);
+
+                        }else if (splitURL.includes("https://www.youtube.com/")){
+                            url = splitURL.split("https://www.youtube.com/") 
+                            console.log(url)
+                            url.splice(1,0,"embed/")
+                            console.log(url)
+                            newURL = url.join("")
+                            console.log(newURL)
+
+                            finalURL = ("https://www.youtube.com/" + newURL)
+                            console.log(finalURL)
+                            document.getElementById("video").setAttribute("src", finalURL);
+                        }
+                        return url;
+                        }                      
+
+                    function getURL(url){
+                        document.getElementById('youTubeButton').onclick = function() {
+                        url = document.getElementById('url').value;
+                        console.log(url) 
+                        
+                                              
+
+                         getSplitURL(url)
+                        }
+                    }    
+
+                    // https://www.youtube.com/embedwatch?v=zpCsoNmPulo
+
+                    // https://www.youtube.com/embed/zpCsoNmPulo
+
+                    getURL(url)
+                    </script>
+                    <ul id="youTubeList">
+                        <li>
+                            <iframe
+                            class="video"
+                            id="video"
+                            src=""
+                            style= "width:100%; height: 360px;"
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        </li>
+                    </ul>
+                    
+            </div> 
+        </div>
+<!--
+
+    <div class="section-toggle">
+                  <input type="checkbox" id="youtube-toggle" class="youtube-toggle"><label for="youtube-toggle"></label>
+              </div>
+
+
+-->
+        </div>
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>
